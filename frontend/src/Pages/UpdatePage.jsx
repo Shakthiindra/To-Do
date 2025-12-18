@@ -14,7 +14,7 @@ const UpdatePage = () => {
   useEffect(() => {
     const fetchNote = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/notes/${id}`);
+        const res = await axios.get(`https://to-do-j69k.onrender.com/${id}`);
         setNote(res.data);
       } catch (error) {
         toast.error("Error fetching note data");
@@ -29,7 +29,7 @@ const UpdatePage = () => {
       return;
     }
     try {
-      await axios.delete(`http://localhost:5000/notes/${id}`);
+      await axios.delete(`https://to-do-j69k.onrender.com/${id}`);
       toast.success("Note deleted successfully!");
       navigate("/");
     } catch (error) {
@@ -39,7 +39,7 @@ const UpdatePage = () => {
 
   const handleSave = async () => {
     try {
-      await axios.put(`http://localhost:5000/notes/${id}`, note);
+      await axios.put(`https://to-do-j69k.onrender.com/${id}`, note);
       toast.success("Note updated successfully!");
       navigate("/");
     } catch (error) {
