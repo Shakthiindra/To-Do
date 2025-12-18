@@ -10,7 +10,7 @@ const app = express();
 
 // parse JSON body before route handlers
 app.use(express.json());
-app.use(cors({origin: 'https://to-do-app-qmty.onrender.com/'}));
+app.use(cors({origin: 'https://to-do-app-qmty.onrender.com'}));
 app.use("/notes", notesRoutes)
 const port = process.env.PORT || 5000;
 
