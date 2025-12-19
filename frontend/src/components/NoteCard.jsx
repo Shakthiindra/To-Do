@@ -10,7 +10,7 @@ const NoteCard = ({ note }) => {
       return;
     }
     try {
-      await axios.delete(`https://to-do-j69k.onrender.com/${id}`);
+      await axios.delete(`https://to-do-j69k.onrender.com/notes/${id}`);
       window.location.reload();
       toast.success("Note deleted successfully!");
     } catch (error) {
