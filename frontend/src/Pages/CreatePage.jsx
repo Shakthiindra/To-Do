@@ -14,7 +14,7 @@ const CreatePage = () => {
     // Handling form submission logic here
 
     if (title && content) {
-      await axios.post("https://to-do-j69k.onrender.com", { title, content });
+      await axios.post("https://to-do-j69k.onrender.com/notes", { title, content });
       toast.success("Note created successfully!");
       navigate("/");
       // Resetting form fields
