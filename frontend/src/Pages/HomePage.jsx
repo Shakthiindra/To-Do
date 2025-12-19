@@ -11,7 +11,7 @@ const HomePage = () => {
     // Fetch notes from backend API
     const fetchNotes = async () => {
       try {
-        const res = await axios.get("https://to-do-j69k.onrender.com");
+        const res = await axios.get("https://to-do-j69k.onrender.com/notes");
         setNotes(res.data);
       } catch (error) {
         console.error("Error fetching notes:", error);
